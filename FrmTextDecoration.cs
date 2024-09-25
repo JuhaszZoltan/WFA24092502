@@ -5,6 +5,10 @@ namespace WFA24092502
         public FrmTextDecoration()
         {
             InitializeComponent();
+            textbox.TextChanged += TextboxTextChanged;
         }
+
+        private void TextboxTextChanged(object? sender, EventArgs e) =>
+            label.Text = textbox.Text;
     }
 }

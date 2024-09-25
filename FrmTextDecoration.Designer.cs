@@ -41,18 +41,20 @@
             btnZoomOut = new Button();
             btnExit = new Button();
             btnDefault = new Button();
+            textbox = new TextBox();
             tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
             // label
             // 
             label.BackColor = Color.LightGray;
+            label.BorderStyle = BorderStyle.FixedSingle;
             label.Font = new Font("Consolas", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 238);
-            label.Location = new Point(19, 19);
+            label.Location = new Point(19, 51);
             label.Margin = new Padding(10);
             label.Name = "label";
             label.Padding = new Padding(10);
-            label.Size = new Size(462, 234);
+            label.Size = new Size(462, 202);
             label.TabIndex = 0;
             label.Text = "Hello, World!";
             // 
@@ -207,11 +209,21 @@
             btnDefault.Text = "DEFAULT";
             btnDefault.UseVisualStyleBackColor = false;
             // 
+            // textbox
+            // 
+            textbox.Font = new Font("Consolas", 12F, FontStyle.Bold, GraphicsUnit.Point, 238);
+            textbox.Location = new Point(19, 12);
+            textbox.Name = "textbox";
+            textbox.PlaceholderText = "enter raw text here...";
+            textbox.Size = new Size(462, 26);
+            textbox.TabIndex = 2;
+            // 
             // FrmTextDecoration
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(500, 500);
+            Controls.Add(textbox);
             Controls.Add(tableLayoutPanel1);
             Controls.Add(label);
             Font = new Font("Segoe UI", 12F);
@@ -223,6 +235,7 @@
             Text = "\"Szövegszerkesztő\"";
             tableLayoutPanel1.ResumeLayout(false);
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -240,5 +253,6 @@
         private Button btnZoomOut;
         private Button btnExit;
         private Button btnDefault;
+        private TextBox textbox;
     }
 }
